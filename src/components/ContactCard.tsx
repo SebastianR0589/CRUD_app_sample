@@ -1,11 +1,17 @@
 import type {JSX} from "react"
 
-export default function ContactCard(): JSX.Element {
+type ContactCardProps = {
+    name: string,
+    email: string,
+    phone: string
+}
+
+export default function ContactCard({name, email, phone}: ContactCardProps): JSX.Element {
     return(
         <div>
-            <p>Name</p>
-            <p>Email</p>
-            <p>Phone</p>
+            <p>{name}</p>
+            <p>{email}</p>
+            <p>{phone}</p>
         </div>
     )
 }
