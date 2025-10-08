@@ -1,39 +1,47 @@
 import type { JSX } from "react"
+import { useState } from "react"
 import ContactCard from "../components/ContactCard"
+import AddContactForm from "../components/AddContactForm"
+import {contacts} from "../helper/contacts"
+import type { Contact } from "../helper/contacts"
 
-type Contact = {
-    name: string,
-    email: string,
-    phone: string
-}
 
-const contacts: Contact[] = [
-    {
-        name: "John Doe",
-        email: "johndoe@email.com",
-        phone: "123-456-7890"
-    },
-    {
-        name: "Jane Smith",
-        email: "janesmith@email.com",
-        phone: "987-654-3210"
-    },
-    {
-        name: "Alice Johnson",
-        email: "alicejohnson@email.com",
-        phone: "555-555-5555"
-    }
-]
+
+
+
+
+
+   
 
 export default function ContactsPage(): JSX.Element {
+
+const [contactList, setContactList] = useState<Contact[]>(contacts);
+
+function addContact(formData: FormData) {
+  const contact: Contact = {
+    name: formData.get("name") as string,
+    email: formData.get("email") as string,
+    phone: formData.get("phone") as string,
+  };
+  setContactList((prev) => [...prev, contact]);
+}
+
+function removeContact(email: string) {
+
+}
+
+
+
     return (
         <>
-      {contacts.map((contact) => (
+    <AddContactForm addContact={addContact} />
+      {contactList.map((contact) => (
         <ContactCard
           key={contact.email}
           name={contact.name}
           email={contact.email}
           phone={contact.phone}
+          removeContact={removeContact}
         />
       ))}
     </>
