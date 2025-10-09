@@ -54,6 +54,7 @@ function updateContact(formData: FormData) {
     return (
         <>
     <AddContactForm addContact={addContact} />
+    <div className="flex flex-wrap justify-center">
       {contactList.map((contact) => (
         <ContactCard
           key={contact.id}
@@ -65,6 +66,7 @@ function updateContact(formData: FormData) {
           updateContact={updateContact}
         />
       ))}
+      </div>
     </>
     )
 }
