@@ -1,26 +1,42 @@
 # Sebastian Riedel Portfolio
+# CRUD App – Contact List
 
-Welcome to my portfolio! Here you'll find some of the web projects I've built.
+This project is a small frontend application built with React, TypeScript, and Tailwind CSS to practice managing state, handling user input, and building reusable UI components.
+
+The app presents a contact list where users can create, read, update, and delete contact entries. The main focus of the project was implementing a clean component structure and handling dynamic data in a React environment.
 
 ---
 
-### CRUD app sample contact list
-**Description:**  
-This app is a short CRUD app sample. It presents a contact list and the ability to add(create), display(read), edit(update) and delete(delete) contacts.
+## Project Goals
+- Build a CRUD interface using React and TypeScript  
+- Manage state and user interactions effectively  
+- Practice reusable component design and UI organization  
+- Apply Tailwind CSS for responsive and clean styling  
 
+---
 
-**GitHub Repo:** [Link to repo](https://github.com/SebastianR0589/CRUD_app_sample)
+## Features
+- Display a list of user contacts  
+- Add new contacts dynamically  
+- Edit existing contacts  
+- Delete contacts from the list  
+- Responsive design with Tailwind CSS  
 
-**Screenshots:**
-![Screenshot 1](./screenshots/standard.PNG)
-![Screenshot 2](./screenshots/add.PNG)
-![Screenshot 3](./screenshots/edit.PNG)
+---
 
-**Features:**
-- Show a list of user contacts
-- Add new contacts
-- Delete contacts
-- Edit existing contacts
+## Tech Stack
+- React  
+- TypeScript  
+- Tailwind CSS  
 
-**Tech Stack:**  
-React, Tailwind, Typescript
+---
+
+## Screenshots
+![Contact List View](./screenshots/standard.PNG)
+![Add Contact](./screenshots/add.PNG)
+![Edit Contact](./screenshots/edit.PNG)
+
+---
+
+## Repository
+GitHub Repository: [Link to repo](https://github.com/SebastianR0589/CRUD_app_sample)
